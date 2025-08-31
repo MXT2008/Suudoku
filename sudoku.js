@@ -6,6 +6,7 @@ let fails = 0;
 let maxfails = 5;
 let gameOver = false;
 let records = document.getElementById("records");
+records.style.display = none;
 function failreset() {
   document.getElementById("fails").innerText = "Fails:" + 0;
   fails = 0;
@@ -294,6 +295,7 @@ function renderGrid(grid, solutiongrid) {
       recordrow.classList.add("recordrow");
       recordrow.textContent = playername + "->" + playertime + " " + failcount;
       records.appendChild(recordrow);
+      records.style.display = table;
       table.classList.add('win');
       showGif();
       WinningSound.play();
@@ -327,6 +329,7 @@ function renderGrid(grid, solutiongrid) {
       hideRandomCells(sudokuGrid, 81)
 
       renderGrid(sudokuGrid, solutiongrid);
+
 
 
 
