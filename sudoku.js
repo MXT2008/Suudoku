@@ -6,6 +6,10 @@ let fails = 0;
 let maxfails = 5;
 let gameOver = false;
 let records = document.getElementById("records");
+records.style.display = "none";
+function showrecords() {
+  document.getElementById("records").style.display = "table";
+}
 function failreset() {
   document.getElementById("fails").innerText = "Fails:" + 0;
   fails = 0;
@@ -287,6 +291,7 @@ function renderGrid(grid, solutiongrid) {
       input.value!=="" && input.value === input.dataset.correct
     );
     if (solved) {
+      showrecords();
       let playertime = document.getElementById("Timer").innerText;
       let failcount = document.getElementById("fails").innerText;
       let playername = document.getElementById("Name").value || "Unknown";
