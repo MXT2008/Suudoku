@@ -187,11 +187,12 @@ input:hover:not(:disabled) {
   background: #a7cef2;
   transform: translate;
 }
-#sudoku td.error {
-  background: red
-}
+#sudoku td.error,
 #sudoku input.error {
   background: red;
+}
+#sudoku.error {
+  border: 5px solid red;
 }
 .correct {
   background: #a7cef2
@@ -249,5 +250,6 @@ td.win:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
+
 
 
