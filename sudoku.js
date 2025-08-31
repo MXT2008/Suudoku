@@ -18,7 +18,7 @@ function makefail() {
       gameOver = true;
       timertostop();
       document.getElementById("sudoku").classList.add("error");
-      document.getElementById("Name").disabled = false;
+      document.getElementById("Name").disabled = true;
       document.querySelectorAll("input").forEach(inp => {
         inp.disabled = true;
         inp.classList.remove("correct");
@@ -41,6 +41,7 @@ function makefail() {
           renderGrid(sudokuGrid, solutiongrid);
           document.getElementById("sudoku").classList.remove("error");
           gameOver = false;
+          document.getElementById("Name").disabled = false;
           inputs.forEach(inp => {
             inp.disabled = false;
             inp.classList.remove("error");
@@ -326,6 +327,7 @@ function renderGrid(grid, solutiongrid) {
       hideRandomCells(sudokuGrid, 81)
 
       renderGrid(sudokuGrid, solutiongrid);
+
 
 
 
