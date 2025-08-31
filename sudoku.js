@@ -42,6 +42,7 @@ function makefail() {
           gameOver = false;
           inputs.forEach(inp => {
             inp.disabled = false;
+            document.getElementById("Name").disabled = false;
             inp.classList.remove("error");
             inp.parentElement.classList.remove("error")});
           }, 3000);
@@ -325,4 +326,5 @@ function renderGrid(grid, solutiongrid) {
       hideRandomCells(sudokuGrid, 81)
 
       renderGrid(sudokuGrid, solutiongrid);
+
 
