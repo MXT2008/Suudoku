@@ -19,6 +19,7 @@ function makefail() {
       timertostop();
       document.getElementById("sudoku").classList.add("error");
       document.getElementById("Name").disabled = true;
+      document.getElementById("Name").classlist.add("error");
       document.querySelectorAll("input").forEach(inp => {
         inp.disabled = true;
         inp.classList.remove("correct");
@@ -328,6 +329,7 @@ function renderGrid(grid, solutiongrid) {
       hideRandomCells(sudokuGrid, 81)
 
       renderGrid(sudokuGrid, solutiongrid);
+
 
 
 
